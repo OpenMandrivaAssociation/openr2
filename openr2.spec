@@ -1,7 +1,7 @@
 Summary:	MFC/R2 signalling over E1 lines using the DAHDI Telephony interface
 Name:		openr2
 Version:	1.3.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2
 Group:		System/Servers
 URL:		http://code.google.com/p/openr2/
@@ -33,7 +33,7 @@ This package contains the openr2 development header files.
 
 %build
 
-%configure2_5x
+%configure2_5x --with-pic
 %make
 
 %install
