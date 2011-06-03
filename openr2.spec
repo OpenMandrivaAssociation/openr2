@@ -55,14 +55,14 @@ rm -rf %{buildroot}
 %{_mandir}/man*/*
 
 %files devel
-/usr/include/openr2.h
-/usr/include/openr2/r2chan.h
-/usr/include/openr2/r2context.h
-/usr/include/openr2/r2log.h
-/usr/include/openr2/r2proto.h
-/usr/include/openr2/r2utils.h
-/usr/lib/libopenr2.a
-/usr/lib/libopenr2.la
-/usr/lib/libopenr2.so.3
-/usr/lib/libopenr2.so.3.1.0
+%{_includedir}/openr2.h
+%{_includedir}/openr2/r2chan.h
+%{_includedir}/openr2/r2context.h
+%{_includedir}/openr2/r2log.h
+%{_includedir}/openr2/r2proto.h
+%{_includedir}/openr2/r2utils.h
+%{_libdir}/libopenr2.a
+%{_libdir}/libopenr2.la
+%{_libdir}/libopenr2.so.3
+%{_libdir}/libopenr2.so.3.1.0
 
