@@ -7,6 +7,7 @@ Group:		System/Servers
 URL:		http://code.google.com/p/openr2/
 Source0:	http://openr2.googlecode.com/files/openr2-%{version}.tar.gz
 Patch0:		openr2-queue-unused-variable-fix.patch
+BuildRequires:	dahdi-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
