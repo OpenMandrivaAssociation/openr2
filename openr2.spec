@@ -95,3 +95,24 @@ rm -rf %{buildroot}
 %{_includedir}/openr2
 %{_includedir}/openr2.h
 %{_libdir}/*.so
+
+
+%changelog
+* Tue Apr 03 2012 Oden Eriksson <oeriksson@mandriva.com> 1.3.2-1mdv2012.0
++ Revision: 788949
+- 1.3.2
+- major fixes
+
+* Fri Jun 03 2011 Lonyai Gergely <aleph@mandriva.org> 1.3.1-3
++ Revision: 682651
+- Add --with-pic
+
+* Fri Jun 03 2011 Lonyai Gergely <aleph@mandriva.org> 1.3.1-2
++ Revision: 682618
+- Release
+- Fix some lib64 dir in %%files
+- Add dependency: dahdi-devel
+- Initial release
+  1.3.1
+- create openr2
+
