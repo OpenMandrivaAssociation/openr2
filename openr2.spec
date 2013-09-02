@@ -4,15 +4,14 @@
 
 Summary:	MFC/R2 signalling over E1 lines using the DAHDI Telephony interface
 Name:		openr2
-Version:	1.3.2
-Release:	%mkrel 1
+Version:	1.3.3
+Release:	1
 License:	GPLv2
 Group:		System/Servers
 URL:		http://code.google.com/p/openr2/
 Source0:	http://openr2.googlecode.com/files/openr2-%{version}.tar.gz
 BuildRequires:	autoconf automake libtool
 BuildRequires:	dahdi-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 OpenR2 is a library that implements the MFC/R2 signalling over E1 lines using
@@ -67,18 +66,12 @@ autoreconf -fi
 %make
 
 %install
-rm -rf %{buildroot}
-
-%makeinstall
+%makeinstall_std
 
 # cleanup
 rm -f %{buildroot}%{_libdir}/*.*a
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root, root)
 %doc doc/*
 %attr(0640,root,root) %config(noreplace) %{_sysconfdir}/r2proto.conf
 %attr(0640,root,root) %config(noreplace) %{_sysconfdir}/r2test.conf
@@ -95,24 +88,3 @@ rm -rf %{buildroot}
 %{_includedir}/openr2
 %{_includedir}/openr2.h
 %{_libdir}/*.so
-
-
-%changelog
-* Tue Apr 03 2012 Oden Eriksson <oeriksson@mandriva.com> 1.3.2-1mdv2012.0
-+ Revision: 788949
-- 1.3.2
-- major fixes
-
-* Fri Jun 03 2011 Lonyai Gergely <aleph@mandriva.org> 1.3.1-3
-+ Revision: 682651
-- Add --with-pic
-
-* Fri Jun 03 2011 Lonyai Gergely <aleph@mandriva.org> 1.3.1-2
-+ Revision: 682618
-- Release
-- Fix some lib64 dir in %%files
-- Add dependency: dahdi-devel
-- Initial release
-  1.3.1
-- create openr2
-
