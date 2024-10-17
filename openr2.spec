@@ -8,7 +8,7 @@ Version:	1.3.3
 Release:	11
 License:	GPLv2
 Group:		System/Servers
-URL:		http://code.google.com/p/openr2/
+URL:		https://code.google.com/p/openr2/
 Source0:	http://openr2.googlecode.com/files/openr2-%{version}.tar.gz
 BuildRequires:	autoconf automake libtool
 BuildRequires:	dahdi-devel
