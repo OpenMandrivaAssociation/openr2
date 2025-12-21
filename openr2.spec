@@ -10,6 +10,8 @@ License:	GPLv2
 Group:		System/Servers
 URL:		https://code.google.com/p/openr2/
 Source0:	http://openr2.googlecode.com/files/openr2-%{version}.tar.gz
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires:	autoconf automake libtool
 BuildRequires:	dahdi-devel
 
